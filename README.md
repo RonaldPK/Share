@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Cordova Share Plugin for Android
 ================================
 
@@ -52,8 +51,3 @@ function fail(error) {console.log('Error: ' + error);}
 
 ```
 =======
-Share
-=====
-
-Cordova share plugin for Android
->>>>>>> f8e56cd1110c78054e13c9bb81d63e8ad01076dc
