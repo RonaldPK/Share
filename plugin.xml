@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.contentecontent.cordova.plugins.share"
+        version="1.0.0">
+
+    <name>Share</name>
+
+    <description>Send message (subject, text, image) to Android's native share dialog</description>
+    <keywords>share, image, android</keywords>
+    <license>LGPL v.3</license>
+
+    <author>Ronald Klip (github.com/RonaldPK)</author>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <!-- ios -->
+    <platform name="android">
+
+        <config-file target="config.xml" parent="/*">
+		<feature name="Share">
+			<param name="android-package" value="com.contentecontent.cordova.plugins.Share"/>
+		</feature>
+        </config-file>
+
+        <js-module src="www/share.js" name="Share">
+            <clobbers target="plugins.share" />
+        </js-module>
+
+	<source-file src="src/android/Share.java" target-dir="src/com/contentecontent/cordova/plugins/share" />
+
+    </platform>
+
+</plugin>

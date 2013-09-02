@@ -1,0 +1,52 @@
+Cordova Save Image From URL -Plugin
+====================
+
+A very simple plugin for Cordova 3.x.x to share a message and an image using Android's native share dialog.
+
+by Ronald Klip ([github.com/RonaldPK](https://github.com/RonaldPK))
+
+based on the PhoneGap Android Share Plugin by Joram Teusink (http://teusink.blogspot.nl/2013/04/phonegap-android-share-plugin.html)
+
+## Supported Platforms ##
+- **Android**
+
+## Adding the Plugin to your project ##
+Through the [Command-line Interface](http://cordova.apache.org/docs/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface):
+```
+cordova plugin add https://github.com/RonaldPK/Share.git
+```
+
+## Release Notes ##
+#### Version 1.0.0 (02-09-2013) ####
+- Initial release.
+
+## Using the plugin ##
+The plugin creates the object ```window.plugins.share``` with one method:
+
+### show() ###
+Takes three parameters: a success callback, a fail callback, and a set of message parameters
+```javascript
+window.plugin.saveImage.show(success, fail, params);
+```
+
+params should be an object with four properties:
+```javascript
+{
+	subject:	'subject line', // string
+	text:		'text here',    // string
+	imagePath: 	'path/to/image',// string
+	mimeType:	'type'          // string
+}
+```
+
+imagePath should be a valid path to a local file. Use PhoneGap's File and FileTransfer core plugins if you need to fetch an image over the web.
+
+mimeType should be one of "image/jpeg", "image/gif", "image/png" or "image/bmp", matching the image.
+
+####  Example ####
+```javascript
+window.plugin.share.show(success, fail, {subject: 'Hi there!', text: 'Main message here', imagePath: '/storage/sdcard0/myApp/picture.jpg', 'image/jpeg'});
+function success() {}
+function fail(error) {console.log('Error: ' + error);}
+
+```
