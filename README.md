@@ -26,10 +26,10 @@ The plugin creates the object ```window.plugins.share``` with one method:
 ### show() ###
 Takes three parameters: a success callback, a fail callback, and a set of message parameters
 ```javascript
-window.plugin.saveImage.show(success, fail, params);
+window.plugin.saveImage.show(messageParams, success, fail);
 ```
 
-params should be an object with four properties:
+messageParams should be an object with four properties:
 ```javascript
 {
 	subject:	'subject line', // string
@@ -45,7 +45,7 @@ mimeType should be one of "image/jpeg", "image/gif", "image/png" or "image/bmp",
 
 ####  Example ####
 ```javascript
-window.plugin.share.show(success, fail, {subject: 'Hi there!', text: 'Main message here', imagePath: '/storage/sdcard0/myApp/picture.jpg', 'image/jpeg'});
+window.plugin.share.show({subject: 'Hi there!', text: 'Main message here', imagePath: '/storage/sdcard0/myApp/picture.jpg', 'image/jpeg'}, success, fail);
 function success() {}
 function fail(error) {console.log('Error: ' + error);}
 
