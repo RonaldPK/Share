@@ -7,7 +7,7 @@
  *  LGPL v3 licensed
  */
 
-package com.contentecontent.cordova.plugins.share.Share;
+package com.contentecontent.cordova.plugins.share;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
