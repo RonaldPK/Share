@@ -1,4 +1,4 @@
-cordova.define("com.contentecontent.cordova.plugins.share.Share", function(require, exports, module) {/**
+/**
  *  share.js
  *  Cordova Share Plugin for Android
  *
@@ -27,4 +27,4 @@ Share.prototype = {
 
 var share = new Share();
 
-module.exports = share;});
+module.exports = share;
