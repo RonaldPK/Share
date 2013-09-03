@@ -21,7 +21,7 @@
 
         <config-file target="config.xml" parent="/*">
 		<feature name="Share">
-			<param name="android-package" value="com.contentecontent.cordova.plugins.Share"/>
+			<param name="android-package" value="com.contentecontent.cordova.plugins.share.Share"/>
 		</feature>
         </config-file>
 
@@ -29,7 +29,7 @@
             <clobbers target="plugins.share" />
         </js-module>
 
-	<source-file src="src/android/Share.java" target-dir="src/com/contentecontent/cordova/plugins/share" />
+		<source-file src="src/android/Share.java" target-dir="src/com/contentecontent/cordova/plugins/share" />
 
     </platform>
 
