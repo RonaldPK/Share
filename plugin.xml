@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.contentecontent.cordova.plugins.share"
+        id="com.contentecontent.cordova.plugins.Share"
         version="1.0.0">
 
     <name>Share</name>
@@ -29,7 +29,7 @@
             <clobbers target="plugins.share" />
         </js-module>
 
-	<source-file src="src/android/Share.java" target-dir="src/com/contentecontent/cordova/plugins/share" />
+	<source-file src="src/android/Share.java" target-dir="src/com/contentecontent/cordova/plugins/Share" />
 
     </platform>
 
