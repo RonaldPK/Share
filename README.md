@@ -45,7 +45,7 @@ mimeType should be one of "image/jpeg", "image/gif", "image/png" or "image/bmp",
 
 ####  Example ####
 ```javascript
-window.plugins.share.show({subject: 'Hi there!', text: 'Main message here', imagePath: '/storage/sdcard0/myApp/picture.jpg', 'image/jpeg'}, success, fail);
+window.plugins.share.show({subject: 'Hi there!', text: 'Main message here', imagePath: 'file:///storage/sdcard0/myApp/picture.jpg', 'image/jpeg'}, success, fail);
 function success() {}
 function fail(error) {console.log('Error: ' + error);}
 
