@@ -3,9 +3,9 @@ Cordova Share Plugin for Android
 
 A very simple plugin for Cordova 3.x.x to share a message and an image using Android's native share dialog.
 
-by Ronald Klip ([github.com/RonaldPK](https://github.com/RonaldPK))
+By Ronald Klip ([github.com/RonaldPK](https://github.com/RonaldPK)).
 
-based on the PhoneGap Android Share Plugin by Joram Teusink (http://teusink.blogspot.nl/2013/04/phonegap-android-share-plugin.html)
+Based on the PhoneGap Android Share Plugin by Joram Teusink (http://teusink.blogspot.nl/2013/04/phonegap-android-share-plugin.html).
 
 ## Supported Platforms ##
 - **Android**
@@ -48,6 +48,9 @@ mimeType should be one of "image/jpeg", "image/gif", "image/png" or "image/bmp",
 window.plugins.share.show({subject: 'Hi there!', text: 'Main message here', imagePath: 'file:///storage/sdcard0/myApp/picture.jpg', 'image/jpeg'}, success, fail);
 function success() {}
 function fail(error) {console.log('Error: ' + error);}
-
 ```
+
+## Facebook ##
+Please note that Facebook's Android app does not allow Android's native share dialog to post text (sigh). Using this plugin will only post an image.
+
 =======
